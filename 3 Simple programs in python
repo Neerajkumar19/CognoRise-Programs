@@ -1,0 +1,94 @@
+#1st program task-CODE
+##Calculator In Python
+##Choice:
+    #1-Addition
+    #2-Subtraction
+    #3-Multiplication
+    #4-Division-Quotient
+    #5-Division-Remainder
+        
+num1=int(input())
+num2=int(input())
+choice=int(input("Enter Choice Code:"))
+if(choice==1):
+    print("Addition")
+    result=num1+num2
+    print(result)
+elif(choice==2):
+    print("Subtraction")
+    result=num1-num2
+    print(result)
+elif(choice==3):
+    print("Multiplication")
+    result=num1*num2
+    print(result)
+elif(choice==4):
+    print("Division-Quotient")
+    result=num1/num2
+    print(result)
+else:
+    print("Division-Remainder")
+    result=num1%num2
+    print(result)
+
+##2nd program task-CODE
+#Creating random password in python
+
+import random
+import string
+password=[]
+characterList=""
+characterList+=string.digits
+characterList+=string.punctuation
+characterList+=string.ascii_letters
+i=0
+l=int(input())
+while(i<l):
+    k=random.choice(characterList)
+    password.append(k)
+    i=i+1
+print("".join(password))
+
+##3rd program task-CODE
+#Creating rock,paper,scissors in python
+
+import random
+
+play=print("Play Round")
+choice=int(input("Enter choice code : "))
+if(choice==1):
+    user="rock"
+    print("user:",user)
+elif(choice==2):
+    user="paper"
+    print("user:",user)
+else:
+    user="scissor"
+    print("user:",user)
+
+cchoice=random.randint(1,3)
+
+if(cchoice==1):
+    computer="rock"
+    print("computer:",computer)
+elif(cchoice==2):
+    computer="paper"
+    print("computer:",computer)
+else:
+    computer="scissor"
+    print("computer:",computer)
+
+if(user==computer):
+    print("Draw")
+elif(choice==1 and cchoice==2):
+    print("computer wins")
+elif(choice==1 and cchoice!=2):
+    print("user wins")
+elif(choice==2 and cchoice!=1):
+    print("computer wins")
+elif(choice==2 and cchoice==1):
+    print("user wins")
+elif(choice!=1 and choice!=2 and cchoice==1):
+    print("computer wins")
+elif(choice!=1 and choice!=2 and cchoice==2):
+    print("user wins")
